@@ -9,6 +9,11 @@ TagManager:
   - TargetSpawner
   - ScoresText
   - TimeText
+  - PlayerHand
+  - Vehicle
+  - Lift
+  - Pallet
+  - Prop
   layers:
   - Default
   - TransparentFX
