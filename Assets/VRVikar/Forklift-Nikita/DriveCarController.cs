@@ -15,21 +15,43 @@ public class DriveCarController : MonoBehaviour
     }
 
 
-    void FixedUpdate () {
+    // void FixedUpdate () {
       
         
-        // Go forward
-        if (Input.GetKey(KeyCode.W))
+    //     // Go forward
+    //     if (Input.GetKey(KeyCode.W))
+    //     {
+    //         Debug.Log ("W");
+    //             // rb.AddForce(transform.forward * driveSpeed* 10);
+    //                 rb.velocity = Vector3.forward * driveSpeed * 10;
+    //             // rb.angularVelocity = Vector3.zero;
+    //     }
+
+    //     if (Input.GetKey(KeyCode.S))
+            
+    //     {
+    //           Debug.Log ("S");
+    //             // rb.AddForce(Vector3.back * driveSpeed * 10);
+    //              rb.velocity = Vector3.back * driveSpeed * 10;
+    //     }
+
+
+    // }
+
+    void Update()
+    {
+          if (Input.GetKey(KeyCode.W))
         {
-                rb.AddForce(transform.forward * driveSpeed* 10);
+        transform.Translate(Vector3.forward * Time.deltaTime );
         }
 
-        if (Input.GetKey(KeyCode.S))
+          if (Input.GetKey(KeyCode.S))
+            
         {
-                rb.AddForce(Vector3.back * driveSpeed * 10);
+              Debug.Log ("S");
+               transform.Translate(Vector3.back * Time.deltaTime );
         }
-
-
+      
     }
 
 
